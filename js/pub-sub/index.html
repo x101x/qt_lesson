@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>买房卖房</title>
+</head>
+
+<body>
+    <script>
+        // 事件监听
+        // dom.addEventListener(event_type,callback)
+        // 事件 触发执行？ 注册  summit
+        // 发生时 body 广播出去， 注册了事件的回调函数去执行 
+        var saleOffice = {
+            name: '万达星城'
+        }
+        saleOffice.cilentList = []; //购房者
+        // saleOffice.cilentList.push()//增加购房者？    
+        saleOffice.listen = function (fn) {
+            saleOffice.cilentList.push(fn);
+        }
+        saleOffice.listen(function (price, squareMeter) {
+            console.log(price, squareMeter);
+            if (price > 15000) {
+                console.log('单平房价超过越南找媳妇');
+            };
+        })
+        saleOffice.listen(function (price, squareMeter) {
+            // console.log(price,squareMeter);
+            if (squareMeter < 100) {
+                console.log('太小了');
+            } else {
+                console.log('可以');
+
+
+            };
+
+        })
+
+        saleOffice.trigger = function () {
+            for (var i = 0; i < saleOffice.cilentList.length; i++)
+            // saleOffice.cilentList[i](20000, 112)
+                typeof saleOffice.cilentList[i] == 'function' ? saleOffice.cilentList[i](20000, 112) : null;
+        }
+    </script>
+</body>
+
+</html>
