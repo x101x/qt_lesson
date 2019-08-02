@@ -8,3 +8,12 @@
 
   分页 ？limit=20&page
   html5 来实现
+
+   http 超文本传输协议
+   文件太大 分几次 等时间长 对大数据做分页
+   http 状态码  304 文件没有修改  使用浏览器缓存
+
+- 得益于 es6 Array.from({length：n}，（v,k）=>`新闻`) 前端大数据模拟
+- 按页分割 分割好  Arrae.from({
+            length:Math.ceil(arr.length/size)
+        },(v,k)=>Array.from({}))
