@@ -19,9 +19,9 @@
     <div class="userinfo"></div>
     <script>
         const getStudentInfo = (event) => {
-            // console.log(event.target);
+            console.log(event.target);
             console.log(this === event.target);
-            // console.log(this); /指向上一级
+            // console.log(this); //指向上一级
         }
         const infoA = document.querySelector('#info-A')
         infoA.addEventListener('click', getStudentInfo, false);
