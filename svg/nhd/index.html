@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin-top: 5px;
+            padding: 0;
+        }
+        .text{
+            font-size: 64px;
+            font-weight: bold;
+            text-transform: uppercase;
+            filter: none;
+            stroke: #3498db;
+            stroke-width: 2px;
+            fill: none;
+            stroke-dasharray: 90, 310;
+            animation: aa 6s  infinite linear;
+            
+        }
+        @keyframes aa{
+            0%{
+                stroke-dashoffset: 0%;
+            }
+            100%{
+                stroke-dashoffset: 100%;
+            }
+        }
+        .text1{
+            animation-delay: -1.5s;
+            stroke: #3498bd;
+            text-shadow: 0 0 5px #3498bd;
+        }
+        .text2{
+            animation-delay: -3s;
+            stroke: #f39c13;
+            text-shadow: 0 0 5px #f39c13;
+        }
+        .text3{
+            animation-delay: -4.5s;
+            stroke: #e74c3c;
+            text-shadow: 0 0 5px #e74c3c;
+        }
+        .text4{
+            animation-delay: -6s;
+            stroke: #9b59b6;
+            text-shadow: 0 0 5px #9b59b6;
+        }
+    </style>
+</head>
+<body>
+    <svg width="100%" height="100" xmlns="http://www.3w.org/2000/svg">
+        <text text-anchor="middle" x="50%"y="50%" class="text text1" > segmentfault.com</text>
+        <text text-anchor="middle" x="50%"y="50%" class="text text2"> segmentfault.com</text>
+        <text text-anchor="middle" x="50%"y="50%" class="text text3"> segmentfault.com</text>
+        <text text-anchor="middle" x="50%"y="50%" class="text text4"> segmentfault.com</text>
+
+    </svg>
+</body>
+</html>
