@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text  " id="text">
+        <p id="show"></p>
+    </div>
+    <script>
+        // 页面（静态）数据（data）核心
+        // 数据和界面的双向绑定
+        // 函数封装的思想 大于10行请封函数 每个函数只做一件事 复用
+        const obj={
+            txt:'ndl'
+        }
+        Object.defineProperty(obj,'txt',{
+
+            get:function(){
+                console.log('获得属性');
+                
+                return obj; 
+            },
+            set:function(newValue){
+                console.log('设置属性');
+                document.getElementById("show").innerHTML=newValue;
+                
+                document.getElementById("text").value=newValue;
+                return newValue;
+            }
+        })
+        setTimeout(()=>{
+            obj.txt='123'
+        },3000)
+        document.getElementById('text').addEventListener('keyup',function(e){
+            obj.txt=e.target.value;
+        })
+
+
+        // const show=document.getElementById("show");
+        // const onInput=document.getElementById("text")
+        // const obj = {
+        //     text:'aaaaa'
+        // }
+        // function init(){
+        //     render(obj.text);
+        //     setTimeout(function(){
+        //         obj.text='bbb'
+        //     },1000)
+        // }
+        // function render(text){
+        //     onInput.value=text;
+        //     show.innerHTML=text;
+        // }
+        // init();
+        // document.getElementById("text").addEventListener(
+        //    'input',function(){
+        //        show.innerHTML = this.value;
+        //    } 
+        // )
+    </script>
+</body>
+</html>
