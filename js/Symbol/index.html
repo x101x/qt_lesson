@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Symbol  第六个基本类型
+
+        let a = Symbol("a");
+        let b = Symbol("b");
+
+        console.log(a === b);
+        var obj = {
+            a: 1,
+            [b]: 2,
+            [a]: 2
+        }
+        console.log(obj);
+
+        for (let keys in obj) {
+            console.log(obj[keys]+"2211111");
+
+        }
+        const keys = Object.keys(obj);
+        console.log(keys);
+        const SymbolKey = Object.getOwnPropertySymbols(obj);
+        console.log(SymbolKey);
+
+        //消除魔法字符串
+        const SHAPE = {
+            react: Symbol(),
+            saojiao: Symbol()
+        }
+
+        function getArea(shape, options) {
+
+            switch (shape) {
+                case SHAPE.react:
+                    return options.width * options.height;
+                case SHAPE.saojiao:
+                    return options.width * options.height * 0.5;
+
+            }
+        }
+        console.log(getArea(SHAPE.react, {
+            width: 1,
+            height: 2
+        }))
+        console.log(getArea(SHAPE.saojiao, {
+            width: 5,
+            height: 2
+        }))
+    </script>
+</body>
+
+</html>
