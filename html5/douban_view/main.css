@@ -1,0 +1,97 @@
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote{
+    margin: 0;
+    padding: 0;
+}
+html{
+    color: #111111;
+    background: #ffffff;
+}
+body{
+    padding-top: 30px;
+}
+body td th{
+    font:12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+}
+#anony-nav{
+    width: 950px;
+    margin: 0 auto 25px;
+}
+#anony-nav .anony-nav-links{
+    float: right;
+    margin-top: 6px;
+}
+ul,ol{
+    list-style: none;
+}
+ul{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+#anony-nav .anony-nav-links li{
+    display: inline-block;
+    *display: inline;
+    margin: 0 0 0 17px;
+}
+#anony-nav .anony-nav-links li .lnk-book{
+    background-position: 0 0;
+}
+#anony-nav .anony-nav-links li .lnk-movie{
+    background-position: -60px 0;
+}
+#anony-nav .anony-nav-links li .lnk-music{
+    background-position: -120px 0;
+}
+#anony-nav .anony-nav-links li .lnk-group{
+    background-position: -180px 0;
+}
+#anony-nav .anony-nav-links li .lnk-event{
+    background-position: -300px 0;
+}
+#anony-nav .anony-nav-links li .lnk-fm{
+    background-position: -241px 0;
+}
+#anony-nav .anony-nav-links li .lnk-shijian{
+    background-position: -360px 0;
+}
+#anony-nav .anony-nav-links li .lnk-market{
+    background-position: -423px 0;
+}
+
+#anony-nav .anony-nav-links li a{
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 40px;
+    height: 20px;
+    overflow: hidden;
+    line-height: 20em;
+    outline: none;
+    vertical-align: middle;
+    background: transparent url(https://img3.doubanio.com/f/sns/8536084688879cb1137e8efdff30e59614ff2f86/pics/sns/anony_home/anony_nav_logo.png) no-repeat 100% 100%;
+}
+#anony-nav h1{
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+    width: 160px;
+    height: 34px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20em;
+    overflow: hidden;
+    background: url(https://img3.doubanio.com/f/sns/19886d443852bee48de2ed91f4a3bdfdaf8c809c/pics/nav/logo_db.png) no-repeat 0 0;
+}
+form{
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    display: block;
+}
