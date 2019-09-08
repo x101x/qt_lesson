@@ -41,7 +41,7 @@
             return function(args){
                 //args 被真正执行时 传过来的参数 
                 //可以引用到 func
-                // var that = this;
+                // var that = this;s
                 clearTimeout(func.id);
                  func.id=setTimeout(function(){
                     //引用到debounce 内部
